@@ -54,6 +54,8 @@ app.all('*', function (req, res) {
   </script>
   </body>
   </html>`
+  res.writeHead(200, {'Content-Type':'text/html'});
+  res.write(html);
 
   res.end(); //end the response
 })
@@ -69,3 +71,4 @@ function getFullURL (req) {
 }
 
 app.listen(port)
+console.log('http://localhost:' + port)
